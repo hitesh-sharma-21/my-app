@@ -24,7 +24,7 @@ function PasswordGen() {
     }, [length ,charAllowed,numberAllowed,passwordGenerator])
     
 const copyPasswordToClip = useCallback(()=>{
-//    passwordRef.current?.setSelectionRange(0,5);
+   passwordRef.current?.setSelectionRange(0,5);
     window.navigator.clipboard.writeText(password)
 },[password])
     return (
@@ -35,7 +35,7 @@ const copyPasswordToClip = useCallback(()=>{
                     <input className="form-control"
                         type="text"
                         value={password}
-                       
+                        ref={passwordRef}
                         readonly />
                 </div>
                 <div className="col-md-1">
@@ -51,7 +51,6 @@ const copyPasswordToClip = useCallback(()=>{
                             max={100}
                             value={length}
                             onChange={(e) => { setLength(e.target.value) }}
-                            ref={passwordRef}
                             />
                 </div>
                        <div className="col-md-1">

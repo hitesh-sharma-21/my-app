@@ -7,6 +7,7 @@ import PasswordGen from './components/PasswordGen';
 import Home from './components/Home';
 import CustomHook from './components/CustomHook';
 import Contact from './components/Contact';
+import Books from './components/Books';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // const route= createBrowserRouter([
@@ -35,6 +36,7 @@ const route = createBrowserRouter(
       <Route path='password' element={<PasswordGen/>}/>
       <Route path='customhook' element={<CustomHook/>}/>
       <Route path='contact' element={<Contact/>}/>
+      <Route path='book' element={<Books/>}/>
     </Route>
   )
 )
