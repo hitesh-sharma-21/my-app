@@ -20,8 +20,8 @@ function Books() {
                 <div  class="card" style={{width: "18rem"}}>
             <img src="..." class="card-img-top" alt="..." />
             <div class="card-body">
-                <h5  class="card-title">{book.title.rendered}</h5>
-                <p class="card-text">{book.excerpt.rendered}</p>
+                <h5  class="card-title" dangerouslySetInnerHTML={{__html: book.title.rendered }}/>
+                <p class="card-text" dangerouslySetInnerHTML={{__html: book.excerpt.rendered}}/>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
